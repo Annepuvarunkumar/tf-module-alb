@@ -2,6 +2,7 @@
 locals {
   #TAGS
   tags    = merge(var.tags, { tf-module-name = "alb" }, { env = var.env })
-#  lb_name = var.internal ? "${var.env}-internal" : "${var.env}-alb-public-sg"
+  sg_name = var.internal ? "${var.env}-alb-internal-sg" : "${var.env}-alb-public-sg"
+  lb_name = var.internal ? "${var.env}-alb-internal" : "${var.env}-alb-public"
 }
 
