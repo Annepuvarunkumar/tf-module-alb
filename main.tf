@@ -25,7 +25,6 @@ resource "aws_lb_listener" "main" {
 }
 
 
-
 resource "aws_security_group" "main" {
   name        = "${var.env}-alb-sg"
   description = "${var.env}-alb-sg"
